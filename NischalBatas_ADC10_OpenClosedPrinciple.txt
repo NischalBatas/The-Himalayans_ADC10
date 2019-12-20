@@ -1,0 +1,47 @@
+ Open/Closed principle:
+ In 1988, Open/Closed Principle was developed by Bertrand Meyer.  There are many software entities such as classes, functions, modules which should be open for extension but closed for modification. This principle is mainly used because it allows its behavior to be extended without any modification of the code.
+
+class Geometery {
+ 
+ 	public void drawShape(Shape s) {
+ 		if (s.m_type==1)
+ 			drawRectangle(s);
+ 		else if (s.m_type==2)
+ 			drawCircle(s);
+ 	}
+ 	public void drawCircle(Circle r) {....}
+ 	public void drawRectangle(Rectangle r) {....}
+ }
+ 
+ class Shape {
+ 	int m_type;
+ }
+ 
+ class Rectangle extends Shape {
+ 	Rectangle() {
+ 		super.m_type=1;
+ 	}
+ }
+ 
+ class Circle extends Shape {
+ 	Circle() {
+ 		super.m_type=2;
+ 	}
+ }
+
+good
+class Geometery {
+ 	public void drawShape(Shape s) {
+ 		s.draw();
+ 	}
+ }
+ 
+ class Shape {
+ 	abstract void draw();
+ }
+ 
+ class Rectangle extends Shape  {
+ 	public void draw() {
+ 		// draw the rectangle
+ 	}
+ }
