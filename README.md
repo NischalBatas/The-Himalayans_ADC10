@@ -1,2 +1,10 @@
 # The-Himalayans_ADC10
-Git Repository
+E-Commerce
+
+Group Members Name:
+
+Nischal Batas
+
+Nishan Kayastha
+
+Aayush Karki
