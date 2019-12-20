@@ -1,0 +1,27 @@
+Definition:
+The Liskov Substitution Principle:
+	The Liskov Substitution principle was introduced by Barbara Liskov in her conference keynote “Data abstraction” in 1987. The Liskov Substitution Principle states that any class that is the child of a parent class should be usable in place of its parent without any unexpected behavior.
+For example:
+//not following Liskov Substitution Principle
+public class Vehicle(
+	public void consumeDeisel(){
+	}
+	public void consumePetrol(){
+	}
+	public void servicing(){
+	}
+)
+// following Liskov Substitution Principle
+public class Vehicle{
+	public void servicing(){
+	}
+}
+//for bus
+public class Bus extends Vehicle{
+	public void consumeDiesel(){	}
+}
+//for bike
+public class Bike extends Vehicle{
+	public void consumePetrol(){
+	}
+}
