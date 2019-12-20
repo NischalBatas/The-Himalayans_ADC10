@@ -1,0 +1,38 @@
+Solid Principle:
+
+Single Responsibility Principle:
+
+Bad Example:
+//single responsibility principle-bad example:
+
+Public interface Gmail{
+	public void setSender(String sender);
+	public void setReceiver(String receiver);
+	public void setContent(String content);
+}
+
+Public class Email : Gmail{
+	public void setSender(String sender){ };
+	public void setReceiver(String receiver){ };
+	public void setContent(String content){ };
+}
+
+Good Example:
+//single responsibility principle-good example:
+
+Public interface Gmail{
+	public void setSender(String sender);
+	public void setReceiver(String receiver);
+	public void setContent(Icontent content);
+}
+
+Public interface Icontent{
+//used for serialization
+	public String getAsString();
+}
+
+Public class Email : Gmail{
+	public void setSender(String sender){ };
+	public void setReceiver(String receiver){ };
+	public void setContent(Icontent content){ };
+}
