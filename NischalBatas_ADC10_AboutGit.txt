@@ -1,0 +1,18 @@
+
+Git clone: Git clone help us to create a git repository copy from a remote source. It will add the original file location to remote file location. The users are able to fetch it and push into if the user has the permission. 
+                      git clone  /path/to/repository
+	          git clone username@host: /path/to/repository
+
+Git push:Git push command helps us to push all the modified local file to the remote repository and update the branches.
+	          git push   origin master
+
+Merge conflict: Merge conflict take chances when making change to the same line of a file or when one user edits a file and another user also delete the same file when using the same repository. 
+
+Git pull: git pull command helps to fetch files from remote repository and merge with local files of user. 
+	         git pull origin
+
+Git branches:Git branches command helps us to create a new branches.
+	         git branch - a* master remotes/origin/master
+
+Git commit: Git commit command helps to access the changes made in the index and create a file with new commit and set the branch according to the point.
+	        git commit -m “Commit changes made”
